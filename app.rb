@@ -54,10 +54,10 @@ __END__
   %head
     %title My Todos
     
-    %link{:href => "stylesheets/screen.css", :media => "screen,projection", :rel => "stylesheet", :type => "text/css" }
-    %link{:href => "stylesheets/print.css", :media => "print", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "screen.css", :media => "screen,projection", :rel => "stylesheet", :type => "text/css" }
+    %link{:href => "print.css", :media => "print", :rel => "stylesheet", :type => "text/css"}
     
-    %link{:href => "stylesheets/app.css", :rel => "stylesheet" }
+    %link{:href => "app.css", :rel => "stylesheet" }
     
     %nav.nav_head
       %ul
@@ -66,12 +66,12 @@ __END__
         %li
           %a{:href => "/hanzi"}汉字研究
         %li
-          其它
+          %a{:href => "/"}其它
           
       
     
   %body
-    %page
+    .page
       %header
         %h1
           Hello world!
