@@ -4,10 +4,9 @@ require 'sinatra'
 set :root, File.dirname(__FILE__)
 set :public_folder, File.dirname(__FILE__) + '/stylesheets'
 set :port, 4993
-#require 'config/setting.rb'
 
 #template :layout do
- # "%html\n =yield\n"
+ # haml :layout
 #end
 require 'rubygems'
 require 'pdf/reader'
@@ -46,40 +45,7 @@ get '/books' do
   haml :'books/index'
 end
 
-__END__
+#__END__
 
-@@ layout
-!!!
-%html
-  %head
-    %title My Todos
-    
-    %link{:href => "screen.css", :media => "screen,projection", :rel => "stylesheet", :type => "text/css" }
-    %link{:href => "print.css", :media => "print", :rel => "stylesheet", :type => "text/css"}
-    
-    %link{:href => "app.css", :rel => "stylesheet" }
-    
-    %nav.nav_head
-      %ul
-        %li
-          %a{:href => "/"} 首页
-        %li
-          %a{:href => "/hanzi"}汉字研究
-        %li
-          %a{:href => "/"}其它
-          
-      
-    
-  %body
-    .page
-      %header
-        %h1
-          Hello world!
-        %p 
-          我用这个网站记录下我学习的过程，我的学习涉及到了宇宙学，佛学，语言学，基因学，社会文明学，数学，以及网络技术等。
-   
-      %article
-        = yield
-      %footer
-      
+#@@ layout
 
