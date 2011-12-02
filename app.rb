@@ -32,15 +32,18 @@ end
 
 get '/books' do
  
-  @filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
-  @filename = "/home/ney/todos/stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
+  #@filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
+  #@filename = "/home/ney/todos/stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
+  @filename = "/home/ney/todos/stylesheets/hd.pdf"
   PDF::Reader.open(@filename) do |reader|
-    @info = reader.info
-    @metadata = reader.metadata
+    @info = reader.info.inspect
+    @metadata = reader.metadata.inspect
     #reader.pages.each do |page| 
-    #  @text = page.text
+     #@text = page.text
     #end
-    #@page_count = reader.page_count
+    @page_counts = reader.page_count
+    @version = reader.pdf_version
+    #@obj = reader.objects[3]
   end
   haml :'books/index'
 end
