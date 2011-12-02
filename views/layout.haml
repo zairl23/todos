@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title My Todos
+    %nav.nav_head
+      %ul
+        %li
+          汉字研究
+        %li
+          其它
+          
+      
+    
+  %body
+    %header
+      %h1
+        Hello world!
+      %p
+        我用这个网站记录下我学习的过程，我的学习涉及到了宇宙学，佛学，语言学，基因学，社会文明学，数学，以及网络技术等。
+    %article
+      %header
+        %h1 汉字的研究
+        %nav
+          %ul
+            %li
+              %ul
+                %h3 新观点
+                %li
+                  %a{:href => "/zwxmhz"} 紫薇星明对汉字的观点 
+                %li
+                  %a{:href => "/wxwmhz"} 某一个外星文明对汉字的观点  
+      %p
+      
+      <%= yield %>
+    %footer
+      

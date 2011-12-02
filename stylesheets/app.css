@@ -1,0 +1,7 @@
+/* line 3, ../sass/app.sass */
+.page {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
