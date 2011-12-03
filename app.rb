@@ -30,6 +30,13 @@ get '/hanzi/wxwmhz' do
   haml :'hanzi/wxwmhz'
 end
 
+get 'index.html' do
+end
+
+get 'web/viewer.html' do
+
+end
+
 get '/books' do
  
   @filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"

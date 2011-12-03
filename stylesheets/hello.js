@@ -7,12 +7,12 @@
 
 'use strict';
 
-PDFJS.getPdf('helloworld.pdf', function getPdfHelloWorld(data) {
+PDFJS.getPdf("O'Reilly.HTML5.Up.and.Running.pdf", function getPdfHelloWorld(data) {
   //
   // Instantiate PDFDoc with PDF data
   //
   var pdf = new PDFJS.PDFDoc(data);
-  var page = pdf.getPage(1);
+  var page = pdf.getPage(2);
   var scale = 1.5;
 
   //
