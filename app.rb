@@ -34,14 +34,23 @@ get '/books' do
  
   #@filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
   #@filename = "/home/ney/todos/stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
-  @filename = "/home/ney/todos/stylesheets/hd.pdf"
+  @filename = "/home/ney/todos/stylesheets/CannonDoloresLegendofStarcrash.pdf"
   PDF::Reader.open(@filename) do |reader|
     @info = reader.info.inspect
     @metadata = reader.metadata.inspect
+    @pages_text = []
     #reader.pages.each do |page| 
-     #@text = page.text
+     # @pages_text << page.text
     #end
     @page_counts = reader.page_count
+    (1..@page_counts).each do |i|
+      @page = reader.page(i)
+      @receiver = PDF::Reader::PageTextReceiver.new
+      @page.walk(@receiver)
+      @pages_text[i] = @receiver.content
+    end
+    #@pages_text = reader.page(3).text
+
     @version = reader.pdf_version
     #@obj = reader.objects[3]
   end
