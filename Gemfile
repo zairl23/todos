@@ -12,3 +12,5 @@ gem "rb-inotify", "0.8.8"
 gem "pdf-reader","1.0.0.beta1"
 
 gem "prawn"
+
+gem "shotgun"  

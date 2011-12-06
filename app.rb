@@ -31,28 +31,25 @@ get '/hanzi/wxwmhz' do
 end
 
 get '/books' do
- 
-  #@filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
-  @filename = "/home/ney/todos/stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
-  #@filename = "/home/ney/todos/stylesheets/helloworld.pdf"
+  # @filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
+  # 选定pdf文件
+  @filename = "/home/ney/todos/stylesheets/hello.pdf"
+  # 读取文件内容
   PDF::Reader.open(@filename) do |reader|
+    # 读取基本信息
     @info = reader.info.inspect
     @metadata = reader.metadata.inspect
-    #@pages_text = []
-    #reader.pages.each do |page| 
-     # @pages_text << page.text
-    #end
-    #@page_counts = reader.page_count
-    #(101..102).each do |i|
-     # @page = reader.page(i)
-      #@receiver = PDF::Reader::PageTextReceiver.new
-      #@page.walk(@receiver)
-      #@pages_text[i] = @receiver.content
-    #end
-    @pages_text = reader.page(1)
-
     @version = reader.pdf_version
-    #@obj = reader.objects[3]
+    # 读取文本信息
+    @pages_text = []
+    @page_counts = reader.page_count
+    if @page_counts == 1
+      @pages_text = reader.page(1)
+    else
+      (1..@page_counts).each do |i|
+        @pages_text << reader.page(i).text 
+      end
+    end
   end
   haml :'books/index'
 end
