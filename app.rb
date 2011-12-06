@@ -30,6 +30,14 @@ get '/hanzi/wxwmhz' do
   haml :'hanzi/wxwmhz'
 end
 
+get '/xifang' do
+  haml :'xifang/index'
+end
+get '/xifang/alex_retrov' do
+  #coffee :'xifang/alex_retrov'
+  markdown :'xifang/alex_retrov'#, :layout_engine => :erb
+end
+
 get '/books' do
  
   @filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
@@ -44,6 +52,7 @@ get '/books' do
   end
   haml :'books/index'
 end
+
 
 #__END__
 
