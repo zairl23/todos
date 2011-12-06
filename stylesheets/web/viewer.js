@@ -4,7 +4,9 @@
 'use strict';
 
 //var kDefaultURL = 'compressed.tracemonkey-pldi-09.pdf';
-var kDefaultURL = "O'Reilly.HTML5.Up.and.Running.pdf";
+//var kDefaultURL = "O'Reilly.HTML5.Up.and.Running.pdf";
+//var kDefaultURL = "PhilExcerpts.pdf";
+var kDefaultURL = "Law_Of_Squares_Part1.pdf"
 var kDefaultScale = 1.5;
 var kDefaultScaleDelta = 1.1;
 var kCacheSize = 20;
