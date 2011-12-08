@@ -1,2 +1,3 @@
 stylesheets/*.pdf
-.sass-cache
+.sass-cache/*
+Gemfile.lock
