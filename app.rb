@@ -37,7 +37,18 @@ get '/xifang/alex_retrov' do
   #coffee :'xifang/alex_retrov'
   markdown :'xifang/alex_retrov'#, :layout_engine => :erb
 end
-
+get '/china' do
+  haml :'/china/index'
+end
+get '/china/zhang_xiang_qian' do
+  markdown :'china/zhang_xiang_qian'
+end
+get '/china/zxq_et_book' do
+  markdown :'china/zxq_et_book'
+end
+get '/china/wang_shi_peng' do
+  'hello wang shi peng'
+end
 get '/books' do
  
   @filename = File.expand_path(File.dirname(__FILE__)) + "/../stylesheets/O'Reilly.HTML5.Up.and.Running.pdf"
