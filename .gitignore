@@ -1,2 +1,2 @@
-*/stylesheets/*.pdf
-*/.sass-cache
+/stylesheets/*.pdf
+/.sass-cache
