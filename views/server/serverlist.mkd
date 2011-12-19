@@ -1,0 +1,13 @@
++ Nginx  
+  Nginx是一款有俄罗斯人开发的轻量级的web 服务器软件，现在很多网站都在使用这款软件，包括国内的互联网巨头腾讯网站都在使用Nginx。这款软件优点，免费、开源、高性能，而且稳定、功能强大、配置简单、资源消耗小。Nginx（发音同 engine x）是一款轻量级的Web 服务器／反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，最初供俄国大型的入口网站及搜寻引擎Rambler（俄文：Рамблер）使用。  其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页伺服器中表现较好.目前中国大陆使用nginx网站用户有：新浪、网易、 腾讯,另外知名的微网志Plurk也使用nginx.      
+  http://nginx.org
++ Lighttpd   
+  是一个德国人领导的开源Web服务器软件，其根本的目的是提供一个专门针对高性能网站，安全、快速、兼容性好并且灵活的web server环境。具有非常低的内存开销，cpu占用率低，效能好，以及丰富的模块等特点。Lighttpd是众多OpenSource轻量级的web server中较为优秀的一个。支持FastCGI, CGI, Auth, 输出压缩(output compress), URL重写, Alias等重要功能，而Apache之所以流行，很大程度也是因为功能丰富，在lighttpd上很多功能都有相应的实现了，这点对于apache的用 户是非常重要的，因为迁移到lighttpd就必须面对这些问题.  
++ Tornado web server  
+  是使用Python编写出來的一个极轻量级、高可伸缩性和非阻塞IO的Web服务器软件，著名的 Friendfeed 网站就是使用它搭建的.Tornado 跟其他主流的Web服务器框架（主要是Python框架）不同是采用epoll非阻塞IO，响应快速，可处理数千并发连接，特别适用用于实时的Web服务。要使用它，必须按照以下套件：
+1）Python（建议使用Python 2.5 / Python 2.6）
+2）Simplejson（建议使用simplejson 2.0.9）
+3）cURL（建议使用curl 7.19.7或以上版本）
+4）Pycurl（建议使用pycurl 7.16.2.1）
+5）Tornado Web Server（这才是主角，版本就照官網上最新的安裝吧）
+  

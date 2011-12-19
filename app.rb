@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'rubygems'
 require 'sinatra'
 #setting
@@ -48,6 +49,18 @@ get '/china/zxq_et_book' do
 end
 get '/china/wang_shi_peng' do
   'hello wang shi peng'
+end
+get '/hacker' do
+  markdown :'hacker/index', #:layout_engine => :haml
+end
+get "/server" do
+  markdown :'server/index'
+end
+get "/server/basic" do
+  markdown :"server/basic"
+end
+get "/server/webserver" do
+  markdown :"server/webserver"
 end
 get '/books' do
  
